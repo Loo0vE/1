@@ -1,0 +1,187 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    min-height: 100vh;
+    width: 100%;
+    color: white;
+    overflow-x: hidden;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    padding: 1rem;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/* Ajustes responsive para el contador */
+.counter {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin: 2rem 0;
+    padding: 0 1rem;
+}
+
+.counter-item {
+    flex: 1;
+    min-width: 150px;
+    max-width: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 1rem;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* Ajustes responsive para la línea de tiempo */
+.timeline {
+    width: 100%;
+    padding: 1rem;
+}
+
+.memory {
+    width: 100%;
+    max-width: 350px;
+    margin: 2rem auto;
+}
+
+.photo-frame {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    aspect-ratio: 3/2;
+    border: 10px solid white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Ajustes responsive para las razones */
+.reasons-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.reason {
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    margin: 0.5rem;
+    word-wrap: break-word;
+}
+
+/* Ajustes responsive para la carta */
+.carta {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.carta-message {
+    text-align: justify;
+    padding: 1rem;
+    line-height: 1.6;
+}
+
+.carta-message p {
+    margin-bottom: 1rem;
+}
+
+.sticker-frame {
+    max-width: 300px;
+    margin: 2rem auto;
+}
+
+.sticker-frame img {
+    width: 100%;
+    height: auto;
+}
+
+/* Ajustes para títulos y texto */
+.title {
+    font-size: clamp(2rem, 5vw, 3rem);
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+    word-wrap: break-word;
+}
+
+.subtitle {
+    font-size: clamp(1rem, 3vw, 1.5rem);
+    margin-bottom: 2rem;
+}
+
+h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    margin-bottom: 1rem;
+}
+
+.cancion {
+    width: 100%;
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+}
+
+.letra-cancion {
+    text-align: center;
+    padding: 2rem;
+    line-height: 1.6;
+}
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+    .container {
+        padding: 0.5rem;
+    }
+    
+    .counter-item {
+        min-width: 120px;
+    }
+    
+    .photo-frame {
+        border-width: 5px;
+    }
+    
+    .carta-message {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .counter {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .counter-item {
+        width: 100%;
+        max-width: none;
+    }
+    
+    .reasons-list {
+        grid-template-columns: 1fr;
+    }
+}
